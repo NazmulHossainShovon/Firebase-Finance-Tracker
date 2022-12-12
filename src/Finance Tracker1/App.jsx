@@ -11,21 +11,19 @@ export default function App() {
 
   return (
     <div>
-      {authIsReady && (
-        <Routes>
-          <Route path="/" element={<Navbar />}>
-            <Route index element={user ? <Home /> : <Navigate to="/login" />} />
-            <Route
-              path="login"
-              element={user ? <Navigate to="/" /> : <Login />}
-            />
-            <Route
-              path="signup"
-              element={user ? <Navigate to="/" /> : <Signup />}
-            />
-          </Route>
-        </Routes>
-      )}
+      <Routes>
+        <Route path="/" element={<Navbar />}>
+          <Route index element={user ? <Home /> : <Navigate to="/login" />} />
+          <Route
+            path="login"
+            element={user ? <Navigate to="/" /> : <Login />}
+          />
+          <Route
+            path="signup"
+            element={user ? <Navigate to="/" /> : <Signup />}
+          />
+        </Route>
+      </Routes>
     </div>
   );
 }
