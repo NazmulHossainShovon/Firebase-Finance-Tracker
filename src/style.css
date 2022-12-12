@@ -1,0 +1,7 @@
+.navbar {
+  color: palevioletred;
+  display: flex;
+  justify-content: space-between;
+}
+.home {
+}
